@@ -52,10 +52,10 @@ RUN apk add --no-cache pcre-dev && \
     chmod +x /usr/local/bin/composer
 
 # Custom php configuration files
-COPY ./etc/php/php.ini $PHP_INI_DIR/
-COPY ./etc/php/php-cli.ini $PHP_INI_DIR/
-COPY ./php/etc/php-fpm.d/*.conf /usr/local/etc/php-fpm.d/
-COPY ./php/etc/php-fpm.conf /usr/local/etc/
+COPY ./conf/php/php.ini $PHP_INI_DIR/
+COPY ./conf/php/php-cli.ini $PHP_INI_DIR/
+COPY ./conf/php-fpm.d/*.conf /usr/local/etc/php-fpm.d/
+COPY ./conf/php-fpm.conf /usr/local/etc/
 
 # Volumes to share
 VOLUME ["/var/www"]
