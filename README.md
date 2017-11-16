@@ -1,10 +1,10 @@
-# docker-nginx-php-plus
+# docker-php-fpm
 
-## Introduction
+## Description
 
-This image is an addition to my [nginx-php](https://hub.docker.com/r/amontaigu/nginx-php/) image.
+This image is my personal extension of the php official image. 
 
-**Php modules added :**
+It includes my custom configuration and other modules like:
 * iconv
 * mcrypt
 * mbstring
@@ -16,18 +16,12 @@ This image is an addition to my [nginx-php](https://hub.docker.com/r/amontaigu/n
 
 ## References and documentation
 
-You can check directly my [original nginx-php image source](https://github.com/AlbanMontaigu/docker-nginx-php) for this.
+You can check directly the [original php image](https://github.com/docker-library/php) for this.
 
 Don't hesitate to check the files of the project because they can contain more documentation and interesting links.
-
-## Getting the source
-
-On GitHub with my [docker-nginx-php](https://github.com/AlbanMontaigu/docker-nginx-php) project.
 
 ## You could be interested by
 
 My [nginx](https://hub.docker.com/r/amontaigu/nginx/) docker image and it's [source](https://github.com/AlbanMontaigu/docker-nginx) on GitHub.
 
-Then you will have a nginx front server.
-
-And finally, you can look at my [nginx-php](https://hub.docker.com/r/amontaigu/nginx-php/) image and its [source](https://github.com/AlbanMontaigu/docker-nginx-php) if you want a more light image for your php installation.
+Then you will have a nginx front server for your php backend.
