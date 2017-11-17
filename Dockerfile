@@ -62,9 +62,7 @@ RUN apk add --no-cache pcre-dev && \
     docker-php-ext-install mbstring mysqli pdo_mysql exif opcache && \
 
 # Install composer since more php apps require it
-    curl -s http://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer && \
-    chmod +x /usr/local/bin/composer
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
 # Custom php configuration files
 COPY ./conf/php/php.ini $PHP_INI_DIR/
