@@ -51,12 +51,12 @@ RUN apk add --no-cache pcre-dev && \
 # Install intl
 # @see https://github.com/docker-library/php/issues/326
     apk add --update --no-cache icu-dev intl intl-dev && \
-    docker-php-ext-install zip && \
+    docker-php-ext-install intl && \
 
 # Install gettext
 # @see https://github.com/docker-library/php/issues/326
     apk add --update --no-cache gettext gettext-dev && \
-    docker-php-ext-install zip && \
+    docker-php-ext-install gettext && \
 
 # Install other common extensions
     docker-php-ext-install mbstring mysqli pdo_mysql exif opcache && \
