@@ -50,12 +50,12 @@ RUN apk add --no-cache pcre-dev && \
 
 # Install intl
 # @see https://github.com/docker-library/php/issues/326
-    apk add --update --no-cache icu-dev intl intl-dev && \
+    apk add --update --no-cache icu-dev && \
     docker-php-ext-install intl && \
 
 # Install gettext
 # @see https://github.com/docker-library/php/issues/326
-    apk add --update --no-cache gettext gettext-dev && \
+    apk add --update --no-cache gettext-dev && \
     docker-php-ext-install gettext && \
 
 # Install other common extensions
