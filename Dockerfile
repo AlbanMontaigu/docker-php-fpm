@@ -48,8 +48,18 @@ RUN apk add --no-cache pcre-dev && \
     apk add --update --no-cache zlib zlib-dev && \
     docker-php-ext-install zip && \
 
+# Install intl
+# @see https://github.com/docker-library/php/issues/326
+    apk add --update --no-cache icu-dev intl intl-dev && \
+    docker-php-ext-install zip && \
+
+# Install gettext
+# @see https://github.com/docker-library/php/issues/326
+    apk add --update --no-cache gettext gettext-dev && \
+    docker-php-ext-install zip && \
+
 # Install other common extensions
-    docker-php-ext-install mbstring mysqli pdo_mysql gettext exif opcache && \
+    docker-php-ext-install mbstring mysqli pdo_mysql exif opcache && \
 
 # Install composer since more php apps require it
     curl -s http://getcomposer.org/installer | php && \
