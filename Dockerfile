@@ -10,7 +10,6 @@
 # @see https://github.com/docker-library/php/issues/326
 # @see https://github.com/m2sh/php7/blob/master/alpine/Dockerfile
 # @see https://medium.com/@shrikeh/setting-up-nginx-and-php-fpm-in-docker-with-unix-sockets-6fdfbdc19f91
-#
 # ================================================================================================================
 
 # Base is official php image
@@ -58,3 +57,4 @@ COPY ./conf/php-fpm.conf /usr/local/etc/
 # Volumes to share
 VOLUME ["/var/www", "/var/run/php"]
 WORKDIR /var/www
+
